@@ -1,4 +1,5 @@
 # androidFun
 ## Personal collection of junks to practice Android app development
 
-  * appTOapp -- launches an app from another app. Possibly implement camera features as well
+  * appTOapp -- destination app with cookie clicker style button
+  * appToapp_server -- starting app to launch appTOapp

@@ -16,13 +16,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final TextView cookieCount = findViewById(R.id.mainText);
         Button cookieButton = findViewById(R.id.cookies);
-
-
         cookieButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 cookies++;
-                cookieCount.setText(cookies);
+                cookieCount.setText(String.valueOf(cookies));
             }
         });
 
