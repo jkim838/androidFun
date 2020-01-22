@@ -1,0 +1,8 @@
+//
+// Created by OKIM on 23/01/2020.
+//
+
+#ifndef NDKEXAMPLE_NATIVE_LIB_H
+#define NDKEXAMPLE_NATIVE_LIB_H
+
+#endif //NDKEXAMPLE_NATIVE_LIB_H
