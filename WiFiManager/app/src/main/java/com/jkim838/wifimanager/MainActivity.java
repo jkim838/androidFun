@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private List<ScanResult> wifiScanResult = new ArrayList<>();
     private WifiManager wifi;
     private TextView scanResult;
+    private ScanResult toConnect;
     private BroadcastReceiver scanReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -111,8 +112,10 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     scanResult.setText(result);
+
                 }
             });
+            wifi.startScan();
 
         }
         else
@@ -132,10 +135,17 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stringBuilder = new StringBuilder();
         for(ScanResult thisResult:wifi.getScanResults())
         {
-            stringBuilder.append(SSIDCount).append(") ");
-            stringBuilder.append(thisResult.SSID).append("\n");
+            stringBuilder.append(SSIDCount +") "
+                    + thisResult.SSID
+                    + " / RSSI: "
+                    + thisResult.level
+                    +" dBm\n");
             SSIDCount++;
         }
+        results.clear();
         return stringBuilder.toString();
     }
 }
+
+// so far implemented continuous scans -- in future implement features to detect disconnection,
+// and connect to other networks
