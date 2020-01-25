@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">bluetoothToaster</string>
+    <string name="serviceUuid">7ae00e9f-2a5e-46e6-8ce2-dae0cde6c5be</string>
+    <string name="serviceName">notificationListener</string>
+</resources>
